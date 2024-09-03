@@ -1,12 +1,17 @@
 {
   "private": true,
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "watch": "vite build --watch",
     "serve": "vite preview",
     "test": "eslint ./resources/scripts --ext .js,.vue",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "release": "standard-version",
+    "release:minor": "standard-version --release-as minor",
+    "release:patch": "standard-version --release-as patch",
+    "release:major": "standard-version --release-as major"
   },
   "devDependencies": {
     "@commitlint/cli": "^19.4.1",
@@ -21,8 +26,10 @@
     "postcss": "^8.2.13",
     "prettier": "^2.3.0",
     "sass": "^1.32.12",
+    "standard-version": "^9.5.0",
     "tailwindcss": "^2.2.7",
-    "vite": "^2.0.1"
+    "vite": "^2.0.1",
+    "husky": "^9.1.5"
   },
   "dependencies": {
     "@headlessui/vue": "^1.4.0",
@@ -31,7 +38,6 @@
     "@tailwindcss/forms": "^0.3.3",
     "@vuelidate/core": "^2.0.0-alpha.24",
     "@vuelidate/validators": "^2.0.0-alpha.21",
-    "husky": "^9.1.5",
     "vite-plugin-externals": "^0.3.0",
     "vue": "^3.2.0-beta.5"
   }
