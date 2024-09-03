@@ -27,7 +27,7 @@
             <BaseInputGroup label="Customer Portal Page Title" class="mt-6">
                 <BaseInput
                   v-model="customerPortalSettings.customer_portal_page_title"
-                  placeholder="Default: Crater - Self Hosted Invoicing Platform"
+                  placeholder="Default: InvoiceShelf - Self Hosted Invoicing Platform"
                 />
               </BaseInputGroup>
 
@@ -85,7 +85,7 @@
               <BaseInputGroup label="Login Page Description">
                 <BaseInput
                   v-model="loginPageDescription"
-                  placeholder="Default: Crater helps you track expenses, record payments & generate beautiful invoices & estimates."
+                  placeholder="Default: InvoiceShelf helps you track expenses, record payments & generate beautiful invoices & estimates."
                 />
               </BaseInputGroup>
             </BaseInputGrid>
@@ -94,13 +94,13 @@
               <BaseInputGroup label="Admin Portal Page Title">
                 <BaseInput
                   v-model="adminPageTitle"
-                  placeholder="Default: Crater - Self Hosted Invoicing Platform"
+                  placeholder="Default: InvoiceShelf - Self Hosted Invoicing Platform"
                 />
               </BaseInputGroup>
               <BaseInputGroup label="Copyright Text">
                 <BaseInput
                   v-model="copyrightText"
-                  placeholder="Default: Copyright @ Crater Invoice, Inc."
+                  placeholder="Default: Copyright @ Invoice Shelf."
                 />
               </BaseInputGroup>
             </BaseInputGrid>
@@ -194,12 +194,12 @@ function setDisplayImage(image) {
 }
 
 const customerPortalSettings = reactive({
-  customer_portal_theme: "crater",
+  customer_portal_theme: "invoiceShelf",
   customer_portal_page_title: null
 })
 
 const adminPortalSettings = reactive({
-  admin_portal_theme: "crater",
+  admin_portal_theme: "invoiceShelf",
 })
 
 utils.mergeSettings(customerPortalSettings, {

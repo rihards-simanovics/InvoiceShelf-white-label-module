@@ -2,8 +2,8 @@
 
 namespace Modules\WhiteLabel\Providers;
 
-use Crater\Events\ModuleDisabledEvent;
-use Crater\Services\Module\ModuleFacade;
+use InvoiceShelf\Events\ModuleDisabledEvent;
+use InvoiceShelf\Services\Module\ModuleFacade;
 use Illuminate\Support\ServiceProvider;
 use Modules\WhiteLabel\Listeners\ModuleDisabledListener;
 

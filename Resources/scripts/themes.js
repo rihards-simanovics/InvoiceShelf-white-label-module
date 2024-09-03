@@ -1,7 +1,7 @@
 export default [
   {
-    name: "Crater",
-    key: "crater",
+    name: "Invoice Shelf",
+    key: "invoiceShelf",
     colors: {
       '50': '#F7F6FD',
       '100': '#EEEEFB',

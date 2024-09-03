@@ -2,9 +2,9 @@
 
 namespace Modules\WhiteLabel\Listeners;
 
-use Crater\Events\ModuleDisabledEvent;
-use Crater\Models\Company;
-use Crater\Models\Setting;
+use InvoiceShelf\Events\ModuleDisabledEvent;
+use InvoiceShelf\Models\Company;
+use InvoiceShelf\Models\Setting;
 
 class ModuleDisabledListener
 {

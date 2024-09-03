@@ -2,8 +2,8 @@
 
 namespace Modules\WhiteLabel\Http\Controllers;
 
-use Crater\Models\CompanySetting;
-use Crater\Models\Setting;
+use InvoiceShelf\Models\CompanySetting;
+use InvoiceShelf\Models\Setting;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 
