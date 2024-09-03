@@ -1,0 +1,10 @@
+{
+  "white_label": {
+    "white_label_title": "White Label",
+    "white_label_description": "Change the theme, branding and other information of the admin & customer portal according to your choice. Note: You can specify different settings for each separate company on Customer Portal.",
+    "customer_portal_logo": "Customer Portal Logo",
+    "admin_portal_logo": "Admin Portal Logo",
+    "login_page_logo": "Login Page Logo",
+    "customer_portal_title": "Customer Portal"
+  }
+}
