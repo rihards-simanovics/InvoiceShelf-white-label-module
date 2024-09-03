@@ -13,7 +13,7 @@
         <BaseTab tab-panel-container="pt-4 mt-px" title="Customer Portal">
           <div>
             <BaseInputGrid class="mt-8">
-              <BaseInputGroup :label="$tc('white_label.customer_portal_logo')">
+              <BaseInputGroup :label="$t('white_label.customer_portal_logo')">
                 <BaseFileUploader
                   v-model="logo"
                   accept="image/*"
@@ -45,7 +45,7 @@
               <template #left="slotProps">
                 <BaseIcon :class="slotProps.class" name="SaveIcon" />
               </template>
-              {{ $tc('general.save') }}
+              {{ $t('general.save') }}
             </BaseButton>
           </div>
         </BaseTab>
@@ -120,7 +120,7 @@
               <template #left="slotProps">
                 <BaseIcon :class="slotProps.class" name="SaveIcon" />
               </template>
-              {{ $tc('general.save') }}
+              {{ $t('general.save') }}
             </BaseButton>
           </div>
         </BaseTab>
