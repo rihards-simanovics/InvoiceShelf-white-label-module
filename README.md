@@ -4,13 +4,21 @@ Adds ability to customise your InvoiceShelf instance with logo and brand color.
 
 ![Preview of Invoice Shelf, White Label Settings page](./preview.png)
 
+## Table of Contents
+
+- [Installation](#installation)
+- [Development](#development)
+- [Troubleshooting](#troubleshooting)
+- [Copyright](#copyright)
+
 ## Installation
 
 1. Download the zip with pre-built module from the latest release in this repo. Alternatively you can build from source, for that follow the steps in the [development](#development) section.
-2. Create `/Modules/` fir in your server InvoiceShelf project root. **NOTE:** make sure it's capitalised like in example, it's not a typo.
+2. Create `/Modules/` dir in your server InvoiceShelf project root. **NOTE:** make sure it's capitalised like in example, it's not a typo.
 3. Upload the `WhiteLabel.zip` into the newly created `/Modules/` dir.
-4. unzip it.
-5. in your server InvoiceShelf project `/` root dir, run `php artisan install:module WhiteLabel 1.0.0`.
+4. Unzip it.
+5. In your server InvoiceShelf project `/` root dir, run `php artisan install:module WhiteLabel 1.0.0`.
+6. (optional) If you have any issues with your installed module, try clearing your browser's `cache`, `cookies`, and/or `site data`.
 
 ## Development
 
@@ -18,7 +26,7 @@ This is a step by step guide on how to get started, with development.
 
 ### Prerequisites
 
-1. nvm (optional)
+1. nvm/fnm (optional)
 2. Node JS: `20 LTS`
 3. `yarn`
 
@@ -32,13 +40,12 @@ This is a step by step guide on how to get started, with development.
 6. Make the changes you wish to make.
 7. Run `yarn build`, new `/Modules/WhiteLabel/dist/` dir will be created with built `css` and `js` bundles.
 8. Upload the contents of `/Modules/WhiteLabel/` to your server with InvoiceShelf. Either use SFTP or zip up the folder.
-9. Create `Modules/` dir inside your server InvoiceShelf `/` root dir of the project.
-10. `upload`/`unzip`/`untar` the `WhiteLabel/` inside the `Modules/` dir.
-11. Return back to server InvoiceShelf `/` root dir, and run `php artisan install:module WhiteLabel 1.0.0` in the `/` root dir of the InvoiceShelf server.
+9. Continue from [Installation (Step 2)](#installation)
 
 ## Troubleshooting
 
 - If your uploaded logo isn't showing up or uploading you may need to again fix the `/storage/` permissions by running `chmod -R 775 storage`.
+- If can't see a save button you need to clear your `cache`, `cookies`, and/or `site data` as specified in [Installation (Step 6)](#installation)
 
 ## Copyright
 
