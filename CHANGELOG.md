@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/rihards-simanovics/InvoiceShelf-white-label-module/compare/v1.1.0...v1.1.1) (2024-09-28)
+
+
+### Bug Fixes
+
+* sql error on save after fresh install by seeding ([c20522a](https://github.com/rihards-simanovics/InvoiceShelf-white-label-module/commits/c20522ab081449d2c884e414a08f03337f8eea20))
+
+
+### Chores
+
+* add SECURITY.md ([e524cbf](https://github.com/rihards-simanovics/InvoiceShelf-white-label-module/commits/e524cbf8139edfb61da19d851352298e5239c9f2))
+* remove unused files and methods ([40fc289](https://github.com/rihards-simanovics/InvoiceShelf-white-label-module/commits/40fc28992dbbad4a88742b778e566819c00bae53))
+
 ## [1.1.0](https://github.com/rihards-simanovics/InvoiceShelf-white-label-module/compare/v1.0.0...v1.1.0) (2024-09-28)
 
 

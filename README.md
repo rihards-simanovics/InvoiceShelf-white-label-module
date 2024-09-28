@@ -18,7 +18,7 @@ Adds ability to customise your InvoiceShelf instance with logo and brand color.
 2. Create `/Modules/` dir in your server InvoiceShelf project root. **NOTE:** make sure it's capitalised like in example, it's not a typo.
 3. Upload the `WhiteLabel.zip` into the newly created `/Modules/` dir.
 4. Unzip it.
-5. In your server InvoiceShelf project `/` root dir, run `php artisan install:module WhiteLabel 1.1.0`.
+5. In your server InvoiceShelf project `/` root dir, run `php artisan install:module WhiteLabel 1.1.1`.
 6. (optional) If you have any issues with your installed module, try clearing your browser's `cache`, `cookies`, and/or `site data`.
 
 ## Update
