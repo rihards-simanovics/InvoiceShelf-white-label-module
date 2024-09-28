@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/rihards-simanovics/InvoiceShelf-white-label-module/compare/v1.0.0...v1.1.0) (2024-09-28)
+
+
+### Features
+
+* update namespace to App\ and add backwards compatibility ([a3f641c](https://github.com/rihards-simanovics/InvoiceShelf-white-label-module/commits/a3f641ce010bb339efb014003aeee4fceb89a865))
+
+
+### Documentation
+
+* add browser data clearing step ([26de0ca](https://github.com/rihards-simanovics/InvoiceShelf-white-label-module/commits/26de0ca646ab0eee8c8999e9dd3c82eff6735470))
+
 ## 1.0.0 (2024-09-03)
 
 
