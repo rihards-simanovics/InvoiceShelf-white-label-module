@@ -2,10 +2,16 @@
 
 namespace Modules\WhiteLabel\Providers;
 
-use InvoiceShelf\Events\ModuleDisabledEvent;
-use InvoiceShelf\Services\Module\ModuleFacade;
+use App\Events\ModuleDisabledEvent;
+use App\Services\Module\ModuleFacade;
 use Illuminate\Support\ServiceProvider;
 use Modules\WhiteLabel\Listeners\ModuleDisabledListener;
+use Modules\Payments\Helpers\VersionHelper;
+
+if (VersionHelper::checkAppVersion('<', '2.0.0')) {
+    VersionHelper::aliasClass('InvoiceShelf\Events\ModuleDisabledEvent', 'App\Events\ModuleDisabledEvent');
+    VersionHelper::aliasClass('InvoiceShelf\Services\Module\ModuleFacade', 'App\Services\Module\ModuleFacade');
+}
 
 class WhiteLabelServiceProvider extends ServiceProvider
 {

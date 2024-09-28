@@ -19,7 +19,9 @@
   },
   "autoload": {
     "psr-4": {
-      "Modules\\WhiteLabel\\": ""
+      "Modules\\WhiteLabel\\": "",
+      "App\\": "app/",
+      "InvoiceShelf\\": "app/"
     }
   }
 }
