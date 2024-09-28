@@ -25,11 +25,11 @@
             </BaseInputGrid>
 
             <BaseInputGroup label="Customer Portal Page Title" class="mt-6">
-                <BaseInput
-                  v-model="customerPortalSettings.customer_portal_page_title"
-                  placeholder="Default: InvoiceShelf - Self Hosted Invoicing Platform"
-                />
-              </BaseInputGroup>
+              <BaseInput
+                v-model="customerPortalTitle"
+                placeholder="Default: InvoiceShelf - Self Hosted Invoicing Platform"
+              />
+            </BaseInputGroup>
 
             <ThemeSelector
               v-model="customerPortalSettings.customer_portal_theme"
@@ -147,6 +147,7 @@ const globalStore = useGlobalStore(true)
 let logo = ref([])
 let adminLogo = ref([])
 let loginPageLogo = ref([])
+let customerPortalTitle = ref(null)
 let loginPageHeading = ref(null)
 let loginPageDescription = ref(null)
 let adminPageTitle = ref(null)
@@ -156,8 +157,7 @@ setInitialData()
 
 function setInitialData() {
   let globalSettings = globalStore.globalSettings
-  let customerLogoUrl =
-    companyStore.selectedCompanySettings.customer_portal_logo
+  let companySettings = companyStore.selectedCompanySettings
 
   loginPageLogo.value = globalSettings.login_page_logo
     ? setDisplayImage(globalSettings.login_page_logo)
@@ -167,7 +167,13 @@ function setInitialData() {
     ? setDisplayImage(globalSettings.admin_portal_logo)
     : []
 
-  logo.value = customerLogoUrl ? setDisplayImage(customerLogoUrl) : []
+  logo.value = companySettings.customer_portal_logo
+    ? setDisplayImage(companySettings.customer_portal_logo)
+    : []
+
+  customerPortalTitle.value = companySettings.customer_portal_page_title
+    ? companySettings.customer_portal_page_title
+    : null
 
   loginPageHeading.value = globalSettings.login_page_heading
     ? globalSettings.login_page_heading
@@ -194,8 +200,7 @@ function setDisplayImage(image) {
 }
 
 const customerPortalSettings = reactive({
-  customer_portal_theme: "invoiceShelf",
-  customer_portal_page_title: null
+  customer_portal_theme: "invoiceShelf"
 })
 
 const adminPortalSettings = reactive({
@@ -257,6 +262,7 @@ async function saveCustomerPortalSettings() {
     data: {
       settings: {
         ...customerPortalSettings,
+        customer_portal_page_title: customerPortalTitle.value
       },
     },
     message: 'settings.preferences.updated_message',
@@ -285,22 +291,22 @@ async function saveAdminPortalSettings() {
       logoRes.data.adminPortalLogoUrl
   }
 
-  let adminData = { ...adminPortalSettings }
-
-  adminData['login_page_heading'] = loginPageHeading.value
-  adminData['login_page_description'] = loginPageDescription.value
-  adminData['admin_page_title'] = adminPageTitle.value
-  adminData['copyright_text'] = copyrightText.value
-
   let response = await globalStore.updateGlobalSettings({
     data: {
-      settings: adminData,
+      settings: {
+        ...adminPortalSettings,
+        login_page_heading: loginPageHeading.value,
+        login_page_description: loginPageDescription.value,
+        admin_page_title: adminPageTitle.value,
+        copyright_text: copyrightText.value
+      },
     },
     message: 'settings.preferences.updated_message',
   })
 
   if (response.data.success) {
-    globalStore.globalSettings.login_page_heading = loginPageHeading.value
+    globalStore.globalSettings.login_page_heading =
+      loginPageHeading.value
     globalStore.globalSettings.login_page_description =
       loginPageDescription.value
     globalStore.globalSettings.admin_page_title =
