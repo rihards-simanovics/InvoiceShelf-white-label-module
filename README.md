@@ -8,7 +8,10 @@ Adds ability to customise your InvoiceShelf instance with logo and brand color.
 
 - [Installation](#installation)
 - [Update](#update)
+  - [Hard Stops](#hard-stops)
 - [Development](#development)
+  - [Prerequisites](#prerequisites)
+  - [Steps](#steps)
 - [Troubleshooting](#troubleshooting)
 - [Copyright](#copyright)
 
@@ -28,7 +31,7 @@ Adds ability to customise your InvoiceShelf instance with logo and brand color.
 3. Remove old `WhiteLabel/` module folder.
 4. Unzip it and visit the site.
 
-## Hard Stops
+### Hard Stops
 
 - InvoiceShelf >= 1.3.0 (upgrade this module to 1.1.0)
 
