@@ -1,3 +1,7 @@
+# 📦 Public Archive: Repo migrated under official Invoice Shelf Namespace
+This repo has been migrated under the official InvoiceShlf namespace
+For further updates please go to: https://github.com/InvoiceShelf/module-whitelabel
+
 # Invoice Shelf - White Label Module
 
 Adds ability to customise your InvoiceShelf instance with logo and brand color.
